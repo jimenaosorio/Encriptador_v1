@@ -1,0 +1,212 @@
+div.Principal
+{
+	position: relative;
+	width: 1440px;
+	height: 1024px;
+
+/* Light blue/light-blue-100 */
+	background: #F3F5FC;
+}
+
+div.Rectangulo1
+{
+	position: absolute;
+	width: 400px;
+	height: 944px;
+	left: 1000px;
+	top: 40px;
+	background: #FFFFFF;
+/* shadow */
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+	border-radius: 32px;
+}
+
+div.Logo
+{
+	position: absolute;
+	left: 200px;
+	top: 50px;
+}
+div.Frame1
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 8px;
+
+	position: absolute;
+	width: 350px;
+	height: 18px;
+	left: 240px;
+	top: 841px;
+
+	/* Solo letras minúsculas y sin acentos */
+
+	width: 300px;
+	height: 18px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 150%;
+
+	color: #495057;
+
+	opacity: 0.8;
+
+/* Inside auto layout */
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+
+div.Exclamacion
+{
+	/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Gray/gray-400 */
+background: #495057;
+
+
+}
+
+div.Frame2
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 8px;
+
+	position: absolute;
+	width: 350px;
+	height: 200px;
+	left: 240px;
+	top: 100px;
+
+	
+}
+.TextoGrande
+{
+	font:          normal bold 26px/50px "Open Sans", sans-serif;
+	background: #F3F5FC;
+}
+
+div.Frame3
+{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 24px;
+
+	position: absolute;
+	width: 680px;
+	height: 67px;
+	left: 240px;
+	top: 885px;
+}
+
+div.Boton1
+{
+background:    #6fa8dc;
+background:    linear-gradient(#6fa8dc, #0b5394);
+border:        1px solid #556699;
+border-radius: 11px;
+box-shadow:    0 1px #444444;
+width:         257px;
+height:        50px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal bold 26px/50px "Open Sans", sans-serif;
+text-align:    center;
+}
+
+div.Boton1 a
+{
+	color:         #ffffff;
+	text-decoration: none;
+}
+
+
+div.Boton2
+{
+background:    #f3f3f3;
+background:    linear-gradient(#f3f3f3, #9fc5e8);
+border:        1px solid #556699;
+border-radius: 11px;
+box-shadow:    0 1px #444444;
+width:         257px;
+height:        50px;
+color:         #000000;
+display:       inline-block;
+font:          normal bold 26px/50px "Open Sans", sans-serif;
+text-align:    center;
+
+}
+
+div.Boton3
+{
+background:    #ebd9f8;
+background:    linear-gradient(#ebd9f8, #a327f5);
+border:        1px solid #556699;
+border-radius: 11px;
+box-shadow:    0 1px #444444;
+width:         257px;
+height:        50px;
+color:         #653503;
+display:       inline-block;
+font:          normal bold 26px/50px "Open Sans", sans-serif;
+text-align:    center;
+visibility: hidden;
+position: absolute;
+left: 50px;
+top: 840px;
+}
+
+
+div.Dibujo
+{
+	position: relative;
+	left: 50px;
+	top: 130px;
+/*	visibility: hidden;*/
+}
+#Mensaje1
+{
+	position: absolute;
+	left: 30px;
+	top: 550px;
+	font:          normal bold 26px/40px "Open Sans", sans-serif;
+	text-align: center;
+	color: #495057;
+	/*visibility: hidden;*/
+}
+#Mensaje2
+{
+	position: absolute;
+	left: 30px;
+	top: 650px;
+	font:          normal 16px/30px "Open Sans", sans-serif;
+	text-align: center;
+	color: #495057;
+	opacity: 0.8;
+/*	visibility: hidden;*/
+}
+#Resultado
+{
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	visibility: hidden;
+}
+
+
