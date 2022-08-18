@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encriptador</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="formatos.css">
+	<script type="text/javascript">
+		function encriptar()
+		{
+			var texto=document.getElementById("texto");
+			if(texto.value=="")
+			{
+				alert("Debes ingresar el texto a encriptar o desencriptar");
+			}
+			else
+			{
+				muestraOculta();
+				var encriptado=encriptaElTexto(texto.value);
+				document.getElementById("res").textContent=encriptado;
+			}
+
+		}
+		function desencriptar()
+		{
+			var texto=document.getElementById("texto");
+			if(texto.value=="")
+			{
+				alert("Debes ingresar el texto a encriptar o desencriptar");
+			}
+			else
+			{
+				muestraOculta();
+				var desencriptado=desencriptaElTexto(texto.value);
+				document.getElementById("res").textContent=desencriptado;
+			}
+		}
+
+
+		function muestraOculta()
+		{
+			document.getElementById("dibujo1").style.height="0px";
+			document.getElementById("Mensaje1").style.visibility="hidden";
+			document.getElementById("Mensaje2").style.visibility="hidden";
+			document.getElementById("Resultado").style.visibility="visible";
+			document.getElementById("boton3").style.visibility="visible";
+		}
+
+		
+
+		function copiar()
+		{
+			var copiado=document.getElementById("res").value;
+			//alert(copiado);
+			document.getElementById("texto").value=copiado;
+		}
+
+
+
+
+
+function encriptaElTexto(palabra)
+{
+	var encriptado="";
+	var letra;
+	
+	for(var i=0; i<palabra.length; i++)
+	{
+		if(palabra.charAt(i)=='a')
+		{
+			encriptado=encriptado+"ai";
+		}
+		else if(palabra.charAt(i)=='e')
+		{
+			encriptado=encriptado+"enter";
+		}
+		else if(palabra.charAt(i)=='i')
+		{
+			encriptado=encriptado+"imes";
+		}
+		else if(palabra.charAt(i)=='o')
+		{
+			encriptado=encriptado+"ober";
+		}
+		else if(palabra.charAt(i)=='u')
+		{
+			encriptado=encriptado+"ufat";
+		}
+		else{
+			encriptado=encriptado+palabra.charAt(i);
+		}
+	}
+	return encriptado;
+}
+
+function desencriptaElTexto(encriptado)
+{
+	var desencriptado=encriptado.replace("ai","a");
+	desencriptado = desencriptado.replace("enter","e");
+	desencriptado = desencriptado.replace("imes","i");
+	desencriptado = desencriptado.replace("ober","o");
+	desencriptado = desencriptado.replace("ufat","u");
+	return desencriptado;
+}
+
+
+
+	</script>
+</head>
+<body>
+	<div class="Principal">
+		<div class="Logo">
+			<img src="img/logo.png"/>
+		</div>
+		<div class="Frame2">
+			<input type="text" id="texto" placeholder="Ingrese el texto aquí" class="TextoGrande" />
+			
+		</div>
+		<div class="Frame1">
+			<div class="exclamacion">
+				<img src="img/exclamacion3.png" width="16">
+			</div>
+			Solo letras minúsculas y sin acentos
+		</div>
+		<div class="Frame3">
+			<div class="Boton1" onclick="encriptar()">
+				<a href="#">
+					Encriptar
+				</a>
+			</div>
+			<div class="Boton2" onclick="desencriptar()">
+				Desencriptar
+			</div>
+			
+		</div>
+		<div class="Rectangulo1">
+			<div class="Dibujo" >
+				<img src="img/mono.png" id="dibujo1"/>
+			</div>
+			<div id="Mensaje1">
+				<p >Ningún mensaje fue encontrado</p>
+			</div>
+			<div id="Mensaje2">
+				<p >Ingresa el texto que desees encriptar o desencriptar.</p>
+			</div>
+			<div id="Resultado">
+				<textarea id="res" rows="30" cols="35" readonly="readonly"></textarea>
+			</div>
+			<div class="Boton3" id="boton3" onclick="copiar()">
+				Copiar
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
